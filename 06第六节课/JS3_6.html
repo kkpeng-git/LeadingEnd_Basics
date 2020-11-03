@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参</title>
+</head>
+<body>
+<script>
+    /*
+        函数传参
+            形参
+            实参
+            不定参
+    */
+    // x是形参
+    function func(x) {
+        console.log(x);
+    }
+    func('111');  // '111' 实参
+
+    function sum(x, y) {  // x,y 形参
+        console.log(x + y);
+    }
+    sum(2, 4); // 2,4 实参
+
+
+
+    function add() {
+        console.log(arguments);  // argumentsd  不定长参数
+    }
+    add(123);
+    add(123,'123');
+
+    function add2(x,y) {
+        console.log(arguments);  //
+        console.log(x, y);  // 1 undefined（未定义）
+    }
+    add2(1);
+
+    function tra() {
+        for (var i=0;i<arguments.length;i++){
+            console.log(arguments[i]);
+        }
+    }
+    tra(1,2,3,4)
+</script>
+</body>
+</html>

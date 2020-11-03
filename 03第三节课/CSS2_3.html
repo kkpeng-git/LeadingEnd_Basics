@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模式---外边距</title>
+    <style>
+        /*
+            特点：
+            1. 不会撑大盒子
+            2. 可以设置负值
+        */
+        div {
+            width: 300px;
+            height: 300px;
+            /*行内块状元素*/
+            /*
+                1. 可以设置宽高
+                2. 不会自动换行
+                3. 当多个行内块状标签写在一起的时候，排列方式从左到右
+            */
+            /*display: inline-block;*/
+        }
+
+        #div1 {
+            border: 2px solid green;
+            /*margin-top: 50px; !*上外边距*!
+            margin-left: 50px; !*左外边距*!
+            !*margin-bottom: 50px;!*下外边距*!*!
+            margin-right: 50px; !*右外边距*!*/
+
+            /*margin: 50px 100px;*/
+
+            /*margin: auto;  !*水平居中*!*/
+
+            margin-bottom: 100px;
+        }
+
+        #div2 {
+            border: 2px solid red;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+
+</body>
+</html>

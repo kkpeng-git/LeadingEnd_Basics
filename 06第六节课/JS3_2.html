@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期对象</title>
+</head>
+<body>
+<script>
+    // 定义日期对象
+    var today = new Date();
+    console.log(today);  // Fri Oct 23 2020 13:38:31 GMT+0800 (中国标准时间)
+
+    console.log(today.getFullYear());  // 获取年份
+    console.log(today.getMonth() + 1);    // 获取月  月份是从0开始的   所以需要 +1
+    console.log(today.getDate());   // 获取日
+    console.log(today.getDay());  // 获取星期
+    console.log(today.getHours());  // 获取小时
+    console.log(today.getMinutes());  // 获取分钟
+    console.log(today.getSeconds());  // 获取秒
+    console.log(today.getMilliseconds());  // 获取毫秒
+
+    // 时间戳
+    var timestamp = Date.now();  // 方法返回自 1970 年 1 月 1 日以来的毫秒数
+    console.log(timestamp);
+</script>
+</body>
+</html>

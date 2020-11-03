@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型---内边距</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+
+            /*
+                特点：
+                    1. 内边距会撑大盒子
+                    2. 内边距不能设置负值
+
+            */
+            /*padding-top: 50px;*/
+            /*padding-left: 50px;*/
+            /*padding-right: 50px;*/
+            /*padding-bottom: 50px;*/
+
+            /*复合样式*/
+            /*当参数值为一个的时候：上下左右都会*/
+            /*padding: 50px;*/
+            /*当参数值为两个的时候：第一个上下  第二个左右*/
+            /*padding: 50px 100px;*/
+            /*当参数值为两个的时候：第一个上  第二个左右 第三个下*/
+            /*padding: 50px 100px 60px;*/
+            /*当参数值为两个的时候：第一个上  第二个右 第三个下 第四个左*/
+            padding: 50px 100px 60px 80px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    我是模型
+</div>
+</body>
+</html>

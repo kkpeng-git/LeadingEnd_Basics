@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递归函数</title>
+</head>
+<body>
+<script>
+    function add(x) {
+        if (x == 1) {
+            return 1;
+        }else {
+            return add(x-1)*x  // 阶乘 5*4*3*2*1 = 120
+        }
+    }
+    console.log(add(5));
+</script>
+</body>
+</html>

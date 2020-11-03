@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        .div2 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid green;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            /*margin-top: 50px;*/
+            /*静态定位*/
+            /*position: static;*/
+
+            /*相对定位  相对于本身的位置发生改变*/
+            /*position: relative;
+            top: 50px;
+            left: 50px;*/
+
+            /*绝对定位
+            父相子绝
+            相对于设置了定位的最近的祖先元素发生位置的改变，
+            如果祖先元素都没有设置定位，就以当前浏览器为参考对象
+            脱离正常的文档流*/
+            /*position: absolute;*/
+            /*top: 100px;*/
+
+            /*固定定位
+            以当前浏览器为参考对象
+            */
+            position: fixed;
+            top: 50px;
+            left: 220px;
+        }
+    </style>
+</head>
+<body>
+<div class="div2">
+    <div id="div1"></div>
+</div>
+
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+<div class="div2"></div>
+
+</body>
+</html>

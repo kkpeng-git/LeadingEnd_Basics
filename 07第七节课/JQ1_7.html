@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery动画</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #3ac7eb;
+
+            position: relative; /*此处讲动画再写*/
+        }
+    </style>
+</head>
+<body>
+<button type="button" id="btn1">按钮一</button>
+<button type="button" id="btn2">按钮二</button>
+<div></div>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    /*
+        hide()  隐藏
+        show()  显示
+    */
+    /*    $("#btn1").click(function () {
+            $("div").hide();  // 隐藏
+        });
+        $("#btn2").click(function () {
+            $("div").show();  // 显示
+        });*/
+
+    /*
+        滑动
+            slideUp()  向上隐藏
+            slideDown()  向下显示
+            slideToggle()  取反
+    */
+    /*    $("#btn1").click(function () {
+            $("div").slideUp(2000);
+            $("div").slideToggle();
+        });
+        $("#btn2").click(function () {
+            $("div").slideDown(2000);
+        });*/
+
+    /*
+        淡入
+            fadeOut  隐藏
+            fadeToggle  显示
+            fadeIn 取反
+    */
+    /*$("#btn1").click(function () {
+        $("div").fadeOut(2000);
+        $("div").fadeToggle(2000);
+    });
+    $("#btn2").click(function () {
+        $("div").fadeIn(2000);
+    });*/
+
+    /*
+        自定义  透明度是从  0 - 1
+            fadeTo()
+    */
+    /*    $("#btn1").click(function () {
+            $("div").fadeTo(2000,0.2);
+        });
+        $("#btn2").click(function () {
+            $("div").fadeTo(2000,0.8);
+        });*/
+
+    /*
+        动画
+            animate() 动画
+            stop()  动画
+            delay() 延迟之后在执行  按钮一 -》 按钮二 -》 按钮一
+    */
+    $("#btn1").click(function () {
+        $("div").animate({
+            width:300,
+            height:300,
+            top:100,
+            left:300,
+        },2000).delay(4000);
+    });
+    $("#btn2").click(function () {
+        $("div").stop();
+    });
+
+</script>
+</body>
+</html>

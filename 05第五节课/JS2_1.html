@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作符</title>
+</head>
+<body>
+
+<script>
+    /*
+    * 算术运算符
+    *  + - * / %
+    *   总结如下：对非Number（字符串除外）的值进行加运算时会先将其转换成Number型在运算，注意任何值和NaN运算都是NaN;
+    *  对于含有字符串类型的相加运算则看成连字符且优先级从左向右
+    */
+    var a = 2;
+    var b = 3;
+    var c = '4';
+    /*    document.write(a + b + "<br>");  // 直接在页面打印
+        document.write(a + c + "<br>");  // 当数字加上字符串的时候  执行的是拼接
+        document.write(c - a + "<br>");  // 隐式转换  2
+        document.write(c * a + "<br>");  // 隐式转换
+        document.write(c / a + "<br>");  // 隐式转换
+        document.write(c % a + "<br>");  // 隐式转换
+    */
+    /*document.write(1 + true + "<br>");  // 隐式转换
+    document.write(1 + false + "<br>");  // 隐式转换
+    document.write(10 + null + "<br>");  // 隐式转换
+    document.write(1 + undefined + "<br>");  // 隐式转换   NaN 非数字的值*/
+
+    /*
+        赋值运算符
+        ++ 放在后面的时候，先打印值，在加1
+        ++ 放在前面的时候，先加一，在打印值
+    */
+    document.write((b = 5) + "<br>");
+    document.write((b += 1) + "<br>");
+    document.write((b -= 1) + "<br>");
+
+    document.write((b++) + "<br>"); // 先打印   3
+    // document.write((b) + "<br>"); // 后加一   4
+
+    document.write((++b) + "<br>");
+    // document.write((b) + "<br>");
+
+
+    /*
+        逻辑运算符
+        || 或
+        && 与
+        ! 取反   真的变假的。  假的变真的
+    */
+    document.write((2 > 3 || 3 < 5) + "<br>");
+    document.write((2 > 3 && 3 < 5) + "<br>");
+    document.write(!(2 > 3 && 3 < 5) + "<br>");
+    document.write((true || null) + "<br>");
+
+    /*
+        比较运算符
+        == 先转换类型  在比较值   等于但不全等
+        === 全等 先比较类型，在比较值
+    */
+    var a = 2;
+    var b = '2';
+    document.write((a == b) + "<br>");  // true
+    document.write((a === b) + "<br>");  // false
+    document.write((null == null) + "<br>");  // true
+    document.write((null == undefined) + "<br>");  // true
+    document.write((NaN == NaN) + "<br>");  // false 因为不确定值
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

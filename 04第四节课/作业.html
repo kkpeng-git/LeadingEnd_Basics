@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+    <style>
+        input {
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #ff00ef;
+            line-height: 200px; /*文字垂直居中*/
+            text-align: center; /*文字水平居中*/
+            color: white;
+        }
+    </style>
+</head>
+<body>
+属&emsp;性：<input type="text" placeholder="请输入属性"><br>
+属性值：<input type="text" placeholder="请输入属性值"><br>
+<input type="button" value="设置属性"><br>
+<div id="box">JavaScript</div>
+<script>
+    var oBox = document.getElementById("box");
+    var aInput = document.getElementsByTagName("input");
+
+    aInput[2].onclick = function () {
+        var att = aInput[0].value;
+        var attValue = aInput[1].value;
+
+        // oBox.style[att] = attValue;  /* 方法一 设置属性 */
+        // oBox.setAttribute('style', att + ":" + attValue);   /*方法二 */
+        oBox.style.cssText = att + ":" + attValue;   /* 方法三 */
+
+        aInput[0].value = '';
+        aInput[1].value = '';
+
+    }
+
+</script>
+</body>
+</html>

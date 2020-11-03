@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的使用</title>
+    <!--<script>
+        /*
+        1.方法用于在网页加载完毕后立刻执行的操作，即当 HTML 文档加载完毕后，立刻执行某个方法。
+            因为 JavaScript 中的函数方法需要在 HTML 文档渲染完成后才可以使用，如果没有渲染完成，此时的 DOM 树是不完整的，
+         这样在调用一些 JavaScript 代码时就可能报出"undefined"错误。
+        2. 但是不建议放在head头部写
+        */
+        window.onload = function () {
+            alert(123123)
+        }
+    </script>-->
+</head>
+<body>
+
+</body>
+<!--<script>
+    /*放在body的底部去写*/
+    alert(123)
+</script>-->
+
+<!--外部JS文件，进行引入  推荐-->
+<script src="js/body.js">
+    /*如果使用引入  那么这个script块将会无法使用*/
+    alert(12)
+</script>
+
+<!--
+注意事项：
+1. 每一行完整的语句后面加上分号
+2. JS严格区分大小写
+-->
+</html>

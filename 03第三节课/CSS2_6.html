@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        /*#div4{
+            !*1. 设置高度  不建议使用*!
+            !*height: 200px;*!
+
+            !*2. 设置超出部分隐藏  不建议使用*!
+            !*overflow: hidden;*!
+        }*/
+
+        /*4. 使用after伪元素清除浮动*/
+        #div4:after{
+            display: block;
+            clear: both;  /*清除浮动*/
+            content: "";
+        }
+        #div1, #div2, #div3 {
+            width: 200px;
+            height: 200px;
+        }
+
+        #div1 {
+            background-color: red;
+            float: left;
+        }
+
+        #div2 {
+            background-color: green;
+            float: left;
+        }
+
+        #div3 {
+            background-color: blue;
+            float: left;
+        }
+        #div5{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="div4">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <!-- 3. 添加一个空的div  不建议使用 -->
+    <!--<div id="div5"></div>-->
+</div>
+</body>
+</html>

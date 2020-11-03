@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax的前后交互</title>
+
+</head>
+<body>
+<h1>Ajax前后交互</h1>
+<input type="text" name=""> +
+<input type="text" name=""> =
+<input type="text" name="">
+<button type="button" id="btn">计算</button>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script>
+    var aIpt = $("input");
+    var oBox = $("#btn");
+
+    // 计算按钮的单击事件
+    oBox.click(function () {
+        // 获取值
+        var a = aIpt.eq(0).val();
+        var b = aIpt.eq(1).val();
+        // console.log(a + b);
+        $.ajax({
+            "type": "post",  // 提交的方式
+            "url": "/",   // 提交的路径
+            "data": {   // 提交的数据，json数据
+                "aa": a,
+                "bb": b
+            },
+            // 成功回调函数
+            "success":function (data) {
+                var c = data['result'];
+                aIpt.eq(2).val(c);
+            },
+            // 请求错误之后的回调函数
+            "error":function (error) {
+                console.log(error);
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

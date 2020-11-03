@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗口跳转</title>
+</head>
+<body>
+    <button type="button" id="btu">跳转窗口</button>
+    <script>
+        var oBtn = document.getElementById("btu");
+        // 在原来的窗口上实现跳转
+        /*oBtn.onclick = function () {
+            window.location.href = "http://baidu.com"
+        }*/
+
+        // 打开新窗口
+        oBtn.onclick = function () {
+            window.open('http://baidu.com')
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS基本数据类型</title>
+</head>
+<body>
+<input type="text" id="ipt1">
+<script>
+    var a = 123;   // number 数字类型
+    console.log(typeof a);
+    var b = "123";   // string 字符串类型
+    console.log(typeof b);
+    var c = true;
+    console.log(typeof c);  // boolean 布尔类型
+    var d;
+    console.log(typeof d);  // undefined  未定义
+    var e = null;
+    console.log(typeof e);  // object 对象 (空对象)
+    var f = [1, 2, 3, 4, 5];   // 数组 object
+    console.log(typeof f);
+
+    // 今日 作业细节
+    var oinp = document.getElementById("ipt1");
+    document.onclick = function(){
+        console.log(oinp.value);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        /*权重大小：id选择器 > class选择器 > 标签选择器*/
+        /*选择器越精确，权重值越高*/
+
+        /* 标签选择器 */
+        p {
+            color: red;
+        }
+        /*class（类） 选择器*/
+        .p1 {
+            color: green;
+        }
+        /*id 选择器*/
+        #p2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<p class="p1">我是段落标签1</p>
+<p id="p2" class="p1" >我是段落标签2</p>
+<p class="p1">我是段落标签3</p>
+</body>
+</html>

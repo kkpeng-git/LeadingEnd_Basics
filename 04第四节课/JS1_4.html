@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS修改样式</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    var obox = document.getElementsByTagName("div")[0];
+    obox.onclick = function () {
+        obox.style.width = "200px";
+        obox.style.height = "200px";
+        // obox.style.background = "green";
+        // obox.style.backgroundColor = "green";
+        // obox.style["background-color"] = "blue";
+        obox.style.cssText = "background-color:blue;";
+        console.log(obox.style.cssText)
+
+    };
+</script>
+</body>
+</html>

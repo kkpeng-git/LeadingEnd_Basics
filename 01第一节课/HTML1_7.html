@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<form action="">
+    <!--文本框-->
+    用户名：<input type="text" placeholder="请输入用户名" name="user">
+    <br>
+    <!--密码框-->
+    密&emsp;码：<input type="password" placeholder="请输入密码" name="pwd">
+    <br>
+    <!--单选框-->
+    性&emsp;别：<input type="radio" value="male" name="sex" id="male">
+    <label for="male">男</label>
+    <input type="radio" value="female" name="sex" checked id="female">
+    <label for="female">女</label>
+    <br>
+    <!--多选框-->
+    爱&emsp;好：<input type="checkbox" name="hobby" value="play">打游戏
+    <input type="checkbox" name="hobby" value="study">学习
+    <input type="checkbox" name="hobby" value="basketball">打篮球
+    <br>
+    <!--上传文件-->
+    <!--accept：限定文件上传的格式-->
+    上传头像：<input type="file" accept="image/*" name="file">
+    <br>
+    <!--下拉框-->
+    地&emsp;址：
+    <select name="address" id="address">
+        <!--进行分组-->
+        <optgroup label="中国">
+            <!--下拉选项-->
+            <option value="HN">湖南</option>
+            <option value="HB">河北</option>
+            <option value="HB2">湖北</option>
+            <option value="ZG" selected>广州</option>
+        </optgroup>
+    </select>
+    <br>
+    <!--个人简介-->
+    <!--文本域-->
+    <!--cols：列   rows：行-->
+    个人简介：
+    <textarea name="introduce" id="introduce" cols="30" rows="10"></textarea>
+    <br>
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+    <button type="reset">普通按钮</button>
+    <!--隐藏域，看不见的东西-->
+    <input type="hidden" value="隐藏域">
+    <!--readonly：只读-->
+    <br>
+    只&emsp;读：<input type="text" value="12182222222" readonly><br>
+    禁&emsp;用: <input type="text" value="12182222222" disabled><br>
+    <!--实现分组-->
+    <fieldset>
+        <legend>用户登录</legend>
+        用户名：<input type="text" placeholder="请输入用户名" name="user">
+        <br>
+        密&emsp;码：<input type="password" placeholder="请输入密码" name="pwd">
+    </fieldset>
+</form>
+<button type="button">普通按钮</button>
+</body>
+</html>
+
+
+
+
+
+
+
+

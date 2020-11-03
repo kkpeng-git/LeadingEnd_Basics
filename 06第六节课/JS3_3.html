@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<script>
+    /*
+        setTimeout()
+            特点：一次性的，时间到就执行
+            在指定的时间后 执行一次
+    */
+    var timer1 = setTimeout(function () {
+        console.log(111);
+    }, 2000);
+    clearTimeout(timer1);
+
+    /*
+        setInterval()
+            特点：周期性的，根据设定的时间周期进行
+            已指定的时间周期进行循环执行
+    */
+    var timer2 = setInterval(function () {
+        console.log(222);
+    }, 2000);
+    clearInterval(timer2);
+</script>
+</body>
+</html>

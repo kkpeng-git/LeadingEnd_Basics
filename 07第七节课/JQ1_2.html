@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <style>
+        p {}
+        #p1 {}
+        .p2 {}
+    </style>
+</head>
+<body>
+<p id="p1" class="p2">我爱祖国</p>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    /*    var oP = document.getElementsByTagName("p")[0];  // JS语法
+        oP.innerText = "我是你爹";*/
+
+    // jQuery获取元素
+    console.log($("p"));   // 通过标签
+    console.log($("#p1"));  // 通过id
+    console.log($(".p2"));  // 通过class
+
+    console.log($("#p1").text());  // 获取文本  innerText
+    console.log($("#p1").html());   // 获取文本  innerHtml
+    $("#p1").text("我是你爹")   // 修改文本
+
+
+    /*
+        jQuery
+            $() jQuery选择器
+            text()   html()   修改查看的方法与innerText、innerHtml几乎相同
+    */
+
+    // console.log($("#p1").innerText());   // jQuery 不能直接使用js方法
+
+</script>
+</body>
+</html>

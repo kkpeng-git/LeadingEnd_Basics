@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本的常用样式</title>
+    <style>
+        p {
+            /*对齐方式*/
+            /*默认状态是 往左对齐*/
+            text-align: left;
+            /*首行缩进*/
+            text-indent: 2em;  /* em代表一个中文字符的距离 */
+            /*文本线*/
+            /*underline 下划线 */
+            /*line-through 删除线 */
+            text-decoration: underline;
+            /*字距*/
+            letter-spacing: 10px;
+            /*词距 注意：需要加空格 */
+            word-spacing: 50px;
+            /*行高  可以解决单行文本的垂直对齐*/
+            line-height: 50px;
+        }
+        span {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<p>我是段落标签 我是段落标签</p>
+<span>我是文本标签</span>
+</body>
+</html>

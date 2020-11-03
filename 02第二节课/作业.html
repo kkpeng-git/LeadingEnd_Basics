@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+    <style>
+        div {
+            width: 380px;
+            height: 460px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin: auto;
+            padding: 0 20px;
+
+        }
+
+        p,.lab1 {
+            font-size: 14px;
+            color: grey;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*鼠标滑入的时候加下划线*/
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ipt1 {
+            width: 323px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 20px;
+        }
+
+        .sel1 {
+            width: 60px;
+            height: 39px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 20px;
+
+        }
+
+        .ipt2 {
+            width: 258px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 20px;
+
+        }
+
+        .ipt4 {
+            width: 220px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 20px;
+        }
+
+        .btu1 {
+            width: 100px;
+            height: 39px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            /*margin-bottom: 20px;*/
+            background: url("images/590x400.jpg") center/100px 39px;
+            vertical-align: middle;
+        }
+        .btu2{
+            width: 380px;
+            height: 44px;
+            border-radius: 5px;
+            border: 1px solid #d7d7d7;
+            margin-top: 20px;
+            background-color: #3ac7eb;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>请注册</h2>
+    <p>已有账号？
+        <a href="#">登陆</a>
+    </p>
+    <form action="#">
+        <label for="username">用户名</label>
+        <input type="text" placeholder="请输入用户名" id="username" name="user" class="ipt1"><br>
+        <label for="phone">手机号</label>
+        <select name="prePhone" id="prePhone" class="sel1">
+            <option value="+86">+86</option>
+            <option value="+86" selected>+0731</option>
+        </select>
+        <input type="text" placeholder="请输入手机号" name="phone" id="phone" class="ipt2"><br>
+        <label for="pwd">密&emsp;码</label>
+        <input type="password" placeholder="请输入密码" id="pwd" name="passwd" class="ipt1"><br>
+        <label for="code">验证码</label>
+        <input type="text" placeholder="输入验证码" name="code" id="code" class="ipt4">
+        <input type="button" class="btu1"><br>
+        <input type="checkbox" name="isAgree" id="isAgree" style="vertical-align: middle">
+        <label for="isAgree" class="lab1">阅读并接受协议</label><br>
+        <input type="submit" value="注册" class="btu2">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作HTML属性</title>
+</head>
+<body>
+<div></div>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    /*
+        操作Class属性
+            addClass  removeClass
+    */
+    $("div").addClass("div1"); // 增
+    $("div").addClass("div2"); // 增 不会覆盖
+    $("div").removeClass("div2"); // 删
+    $("div").removeClass("div1").addClass("div3"); // 改
+
+    /*
+        操作其他属性
+            attr  removeAttr
+    */
+    $("div").attr("id",'div12');   // 增 与js中 setAttribute 相同
+    $("div").attr("id",'div13');   // 改
+    $("div").removeAttr("id");  // 删  直接吧整个id删除
+    // $("div").removeAttr("class");  // 删  直接吧整个class删除
+
+    /*
+        toggleClass()
+        无则增加  有则删
+        可以用于点击事件，点一下增加，点一下删掉。效果
+    */
+    $("div").toggleClass("div1");  // 会增加 div1
+    $("div").toggleClass("div1");  // 会直接删除 div1
+</script>
+
+
+<input type="text" value="1">
+<input type="text" value="2">
+<input type="text" value="3">
+<script>
+    /*
+        获取值默认第一个
+        设置值设置所有
+    */
+    console.log($("input").val());  // 只有第一个value的值
+    $("input").val(3333)  //设置值设置所有
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常</title>
+</head>
+<body>
+<button type="button" id="btu" onclick="func()">异常</button>
+<button type="button" id="btu2" onclick="func2()">自定义异常</button>
+<script>
+    /*
+        try 正确执行的代码   可能会出错的代码
+        catch 执行错误后执行
+        finally 不管正确还是错误都会执行
+        throw  自定义异常
+    */
+    function func() {
+        var num = 100;
+        try {
+            alert("我是" + num)
+        } catch (e) {
+            alert("错误类型:" + e.name + "\n错误信息:" + e.message);  // ReferenceError  非法引用
+        } finally {
+            alert("不管是正确还是错误都会执行")
+        }
+    }
+
+    function func2() {
+        var num = 11;
+        try {
+            if (num < 100) throw "太小了";
+            if (num == 100) throw "刚刚好";
+            if (num >= 100) throw "太大了";
+        } catch (e) {
+            alert("输入的值：" + e);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级</title>
+    <style>
+        /*z-index 建立在定位元素上*/
+        ul {
+            list-style: none; /*取消前缀*/
+            position: relative;
+        }
+
+        ul li {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .li1 {
+            background: red;
+            z-index: 2;
+        }
+
+        .li2 {
+            background: green;
+            z-index: 1;
+        }
+
+        .li3 {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="li1"></li>
+    <li class="li2"></li>
+    <li class="li3"></li>
+</ul>
+</body>
+</html>

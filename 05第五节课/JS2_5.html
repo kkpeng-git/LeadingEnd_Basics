@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组方法</title>
+</head>
+<body>
+<script>
+    var array = ["西瓜", "橘子", "香蕉", "椰子", "甘蔗"];
+    console.log(array.length);  // 5个元素
+    console.log(array.indexOf("香蕉"));  // 下标 2
+
+    console.log(array.push("葡萄"));  // 追加  返回长度   6
+    console.log(array);  // 追加在数组的最后一个
+
+    console.log(array.unshift("苹果"));  // 增加
+    console.log(array);  // 添加在数组的最前面
+
+    console.log(array.pop());  // 返回被删除的元素  删除数组中最后一个
+    console.log(array);
+
+    console.log(array.shift()); // 返回被删除的元素  删除数组中最前一个
+    console.log(array);
+
+    console.log(array.slice(1, 3));  // 切片
+
+    console.log(array.join("-"));  // 拼接  西瓜-橘子-香蕉-椰子-甘蔗
+
+    var arr = ['a', 'z', 's', 'g', 'f',];
+    console.log(arr.sort());  // 排序
+    console.log(arr.reverse());  // 排序 反向
+
+
+</script>
+</body>
+</html>

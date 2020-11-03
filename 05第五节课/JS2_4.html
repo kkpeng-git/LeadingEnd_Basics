@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串方法</title>
+</head>
+<body>
+<script>
+    var str = "hello world";
+    console.log(str.length); // 长度  空格也算
+
+    console.log(str.indexOf("o"));  // 查找下标  只会给出首次出现的
+    // 因为上面知道第一个 “l” 的索引值来第2位，所以从第3位在继续找
+    console.log(str.indexOf("o", 5)); // 查找下标  只会给出首次出现的
+
+    console.log(str.split("o"));  // 分割。 返回数组
+    console.log(str.split(" "));
+
+    console.log(str.replace("h", "a"));  // 替换
+
+    console.log(str.slice(0, 5)); // 切片  开始索引--》结束索引+1  能设置负值
+    console.log(str.substring(5, 0));  // 截取  不能设置负值
+
+
+</script>
+</body>
+</html>
+
+

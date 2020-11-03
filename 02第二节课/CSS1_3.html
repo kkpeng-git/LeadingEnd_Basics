@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        /*群组选择器*/
+        /*p, span {
+            color: red;
+        }*/
+
+        /*全选 选择器*/
+        /** {
+            color: green;
+        }*/
+
+        /*层次选择器*/
+        /*a. 后代选择器*/
+        /*div span{
+            color: blueviolet;
+        } */
+
+        /*div ul{
+            list-style: none;  !* 列表的样式。去除样式 *!
+        }*/
+        /*b. 子代选择器*/
+        div > ul {
+            list-style: none;
+        }
+
+        /*c. 兄弟选择器*/
+        #p22~p{
+            color: aqua;
+        }
+
+        /*d. 相邻兄弟选择器*/
+        #p22+p{
+            color: #ff00ef;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>我是段落标签1</p>
+    <p id="p22">我是段落标签2
+        <span>我是段落标签里面的文本标签</span>
+    </p>
+    <p>我是段落标签3</p>
+    <p>我是段落标签4</p>
+    <span>我是文本标签1
+        <b>我是粗体标签</b>
+    </span>
+    <p>我是段落标签5</p>
+    <h1>我是一级标题</h1>
+    <ul>
+        <li>1</li>
+        <li>2
+            <ul>
+                <li>11</li>
+                <li>22</li>
+            </ul>
+        </li>
+        <li>3</li>
+    </ul>
+</div>
+</body>
+</html>

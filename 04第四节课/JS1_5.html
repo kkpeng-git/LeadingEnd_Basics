@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS操作标签属性</title>
+    <style>
+        .bb {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var obox = document.getElementById("div1");
+    // 单独操作Class属性
+    obox.className = "aa";  // 增加
+    obox.className = "bb";  // 修改  覆盖
+    console.log(obox.className);  // 查
+    obox.removeAttribute("class");  // 移除class属性
+
+    // 操作自定义属性
+    obox.setAttribute("aa", "a11");  // 增加
+    obox.setAttribute("aa", "a22");  // 增加
+    console.log(obox.getAttribute("aa"));  // 查
+    console.log(obox.hasAttribute("name"));  // 查看是否有此属性  true  false
+    obox.removeAttribute("aa");  // 移除aa属性  删除
+
+</script>
+</body>
+</html>

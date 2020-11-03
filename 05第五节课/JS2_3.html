@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环</title>
+</head>
+<body>
+<!--此处最后讲-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    /*
+        for 循环
+        for(初始值;判断条件;更新初始值)
+        循序：循环初始值-》判断-》执行-》更新-》判断-》执行
+        特点：先判断在执行
+    */
+    /*    for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                // break;
+                continue;  //跳出本次循环
+            }
+            document.write("我跑了" + i + "圈<br>");  // 循环体
+        }*/
+
+    /*
+        for...in 语句
+        遍历一个数组的时候。得到的是数组中对应的下标值
+    */
+    var array = [1, 2, 3, 4, 5, 6];
+    for (var i in array) {  // 得到的i 并不是array数组中的元素，而是下标
+        document.write(array[i] + "<br>")
+    }
+
+    /*
+        while 循环
+        和for 循环顺序相同
+        特点：先判断在执行
+    */
+    /*    var i = 1;  // 声明循环变量
+        while (i <= 5) {  // 判断循环条件
+            document.write("我跑了" + i + "圈<br>");  // 循环体
+            i++;  // 更新循环条件
+        }*/
+
+    /*
+        do while
+        特点：先执行在判断
+        不管初始条件是否成立，都至少执行一次
+    */
+    /*    var i = 1;
+        do {
+            document.write("我跑了" + i + "圈<br>");  // 循环体
+            i++;
+        }while (i<=5);*/
+
+
+    /*
+        需求：
+            点击li标签。给出对应的角标
+    */
+    // var aLi = document.getElementsByTagName("li");
+    // 第一种
+    // var 为全局变量
+    /*        for (var i = 0; i < aLi.length; i++) {
+                aLi[i].index = i;
+                aLi[i].onclick = function () {
+                    // alert(this.innerText);
+                    alert(this.index);
+                }
+            }
+            document.write(i)  // 可以正常打印i变量中的值*/
+    // 第二种
+    // let 用于局部变量(块级)  所在的代码块内有效  ES6中新加的关键字（变量声明）
+    /*    for (let i = 0; i < aLi.length; i++) {
+            // aLi[i].index = i;
+            aLi[i].onclick = function () {
+                alert(i)
+            }
+        }
+        document.write(i)  // 无法打印 i变量中的值*/
+
+</script>
+</body>
+</html>

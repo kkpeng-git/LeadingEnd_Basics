@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的作用域</title>
+</head>
+<body>
+<script>
+    /*
+        函数作用域
+        全局作用域  全局变量
+        在函数里面用var定义的变量是局部变量
+        在函数里面  没有用var的变量，会成为全局变量
+        子作用域会改变父作用域的值  (在子作用域没有使用var的情况下)
+    */
+   /* var a = 100;
+    function func() {
+        var a = 200;
+        // a = 200;   // 在函数里面  没有用var的变量，会成为全局变量
+        alert(a)
+    }
+    alert(a);  // 100
+    func();  // 200
+    alert(a);  // 100*/
+
+  /* var a = 100;
+   function func1() {
+       var a = 200;
+       function func2() {
+           var a = 300;
+       }
+       func2();
+       alert(a)
+   }
+   alert(a);  // 100
+   func1();  // 200
+   alert(a)  // 100*/
+
+
+      /*
+        var 和 let 的区别
+            var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。
+            let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。
+    */
+  //======== var =====================================
+    {
+        var i= 1;
+        console.log(i);
+    }
+    console.log(i);  // 可见，通过var定义的变量可以跨块作用域访问到。
+    function A() {
+        var b = 2;
+		console.log(b); // 2
+    }
+    A();
+    // console.log(b); // 报错，	// 可见，通过var定义的变量不能跨函数作用域访问到
+    //=================================================
+
+    //======== let =====================================
+    {
+        let j= 1;
+        console.log(j);
+    }
+    // console.log(j); // 报错
+    function B() {
+        let c = 2;
+		console.log(c); // 2
+    }
+    B();
+    console.log(c);
+    //=================================================
+
+</script>
+</body>
+</html>

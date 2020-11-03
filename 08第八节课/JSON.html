@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    // 定义一个json对象。以键值对存在
+    var obj = {"name": "qingge", "age": 18, "sex": "man"};
+    console.log(obj);   // 可读性
+    console.log(obj['name']);
+    console.log(obj.name);
+
+    obj.name = "Sunshine Boy";  // 可写性
+    console.log(obj.name);
+
+    // for in 如果是遍历数组 key为下标
+    // for in 如果是JSON key为键
+    /*for (var key in obj) {
+        console.log(key);  // 输入 json的key
+        console.log(obj.key);  // undefined
+        console.log(obj[key]);  // 用此方法
+    }*/
+
+    // JSON对象转字符串
+    console.log(typeof obj);  // object
+    var obj2 = JSON.stringify(obj);  // 转字符串
+    console.log(typeof obj2);  // string
+    var obj3 = JSON.parse(obj2); // 转JSON对象
+    console.log(typeof obj3);  // object
+
+
+</script>
+</body>
+</html>

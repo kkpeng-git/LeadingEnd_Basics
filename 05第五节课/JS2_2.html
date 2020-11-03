@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS流程控制</title>
+</head>
+<body>
+<script>
+    /*
+        if ... else
+        if ... else if ... else
+    */
+    var name = "B";
+    if (name === "A") {
+        document.write("大奖");
+    } else if (name === "B") {
+        document.write("二等奖");
+    } else {
+        document.write("三等奖");
+    }
+    document.write("<br>");
+
+    /*
+        switch 语句
+        · 计算一次 switch 表达式
+        · 把表达式的值与每个 case 的值进行对比
+        · 如果存在匹配，则执行关联代码
+        break 跳出当前代码块
+    */
+
+    var day = 3;
+    switch (day) {
+        case 1:
+            document.write("星期一");
+            break;
+        case 2:
+            document.write("星期二");
+            break;
+        case 3:
+            document.write("星期三");
+            // break;
+        case 4:
+            document.write("星期四");
+            // break;
+        case 5:
+            document.write("星期五");
+            break;
+        default:
+            document.write("请输入1~5的数字");
+    }
+</script>
+</body>
+</html>

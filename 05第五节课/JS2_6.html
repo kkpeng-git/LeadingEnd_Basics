@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>补充的方法--数据类型转换</title>
+</head>
+<body>
+<script>
+    var num = 12.16;
+    console.log(typeof (num));
+    console.log(typeof (num.toString()));  // tostring  转string
+    console.log(num.toFixed());  // toFixed  把小数变整数  转string  12
+    console.log(num.toFixed(1));  // 保留小数点后几位   12.2
+    console.log(parseInt(num));  // 转整形       12
+    console.log(parseFloat(num));  // 转浮点型  12.16
+
+    // 另外一种转换方式  强制转换
+    console.log(typeof String(111));
+    console.log(typeof Number("11"));
+    console.log(Boolean(null));  // false
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #ff00ef;
+        }
+    </style>
+</head>
+<body>
+<p>我是111</p>
+<p>我是222</p>
+<p>我是333</p>
+<button type="button">移除点击事件</button>
+
+<div></div>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    /*
+        click()  单击事件
+        dblclick()  双击事件
+        hover()  当一个函数的时候，划入滑出执行同一个方法
+                 当两个函数的时候，第一个滑入事件，第二个滑出事件
+        on()  添加事件
+        off()   移除on的事件
+    */
+    $("p").eq(0).click(function () {
+        alert(111)
+    });
+    $("p").eq(1).dblclick(function () {
+        alert(222)
+    });
+
+    // mouse  鼠标
+    $("div").hover(function () {  // 滑入滑出都执行  可以看看源码
+        console.log(1);
+    },function () {
+        console.log(2);
+    });
+
+    $("p").on("click",function () {
+        $(this).css("background",'red')
+    });
+    $("button").click(function () {
+        $("p").off("click");   // 移除上面的单击事件
+    })
+
+</script>
+</body>
+</html>

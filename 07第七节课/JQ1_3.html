@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery和js相互转换</title>
+</head>
+<body>
+<p id="p1" class="p2">我爱祖国</p>
+<p class="p2">我爱祖国</p>
+<p class="p2">我爱祖国</p>
+<ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+</ul>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    // JQ转换JS   JQ使用js的方法
+    // $("p").text(123123);  // JQ不需要加下标就可以操作多个元素
+    /*
+        $("p").get(0).innerText = "我是你爹";
+        $("p")[1].innerText = "我是你爹";
+    */
+
+    // JS转换JQ
+    var aP = document.getElementsByTagName("p");
+    $(aP).eq(1).text("123123");  // eq是JQ加下标的方法
+
+    // 遍历 each()
+    $("li").each(function () {
+        // alert($(this).text());   // JQ形式
+        // alert(this.innerText)  // JS形式
+        alert($(this).index())  // JQ获取下标
+
+    })
+
+</script>
+</body>
+</html>

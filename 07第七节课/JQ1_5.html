@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作CSS样式</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            padding: 50px;
+            position: relative;   /*讲定位的时候在写*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>我是你爹</p>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+
+    /*
+        width()  获取本身设置的宽度
+        innerWidth()  获取内边距加上宽度之后的宽
+        outerWidth()  获取加上padding和border 之后的宽
+    */
+    console.log($("div").width());  // 200
+    console.log($("div").innerWidth());   // 300
+    console.log($("div").outerWidth());   // 310
+
+    /*
+        css()  修改单个样式
+        css({})  修改多个样式  键值对的形式
+    */
+    $("div").css("width", "300px");
+    $("div").css({
+        "width": "400px",
+        "height": "400px",
+        "background-color": "green",
+    })
+</script>
+<script>
+    /*
+        定位父级
+            前提是父级要设置定位才行，不然就是距离浏览器的位置
+    */
+    var box = $("p").position(); // {top : 63, left : 63}
+    // {top : 63, left : 63}是不对的，在父级设置定位属性后 {top : 50, left : 50}
+    console.log(box.top);
+    console.log(box.left);
+
+    /*
+        定位窗口
+            始终返回相对于浏览器的距离，它会忽略外层元素。
+            在不同浏览器中,offset()得到的相对于浏览器的位置不同
+    */
+    var box1 = $("p").offset();
+    console.log(box1); // {top: 79, left: 63}
+</script>
+</body>
+</html>
